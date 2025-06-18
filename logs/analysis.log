@@ -37,3 +37,102 @@
 2025-06-18 18:21:14,552 - INFO - 分析报告已生成: output/analysis_report.md
 2025-06-18 18:21:18,473 - INFO - 可视化图表已保存: output/analysis_charts.png
 2025-06-18 18:21:18,475 - INFO - 完整分析流程执行完成
+2025-06-18 22:08:32,483 - INFO - 分析器初始化完成 - 停用词: 294, 旅游分类: 13
+2025-06-18 22:08:32,483 - INFO - 加载数据文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:08:32,502 - INFO - 数据加载完成 - 总记录: 47364, 有效业务描述: 47364
+2025-06-18 22:08:32,502 - INFO - 开始分词处理...
+2025-06-18 22:08:32,503 - DEBUG - Building prefix dict from the default dictionary ...
+2025-06-18 22:08:32,685 - DEBUG - Dumping model to file cache /var/folders/x4/4x3jbdmd10bcx3fgchc2r0h40000gn/T/jieba.cache
+2025-06-18 22:08:32,706 - DEBUG - Loading model cost 0.203 seconds.
+2025-06-18 22:08:32,707 - DEBUG - Prefix dict has been built successfully.
+2025-06-18 22:08:33,818 - INFO - 分词完成 - 总词数: 324726, 不重复词数: 6800
+2025-06-18 22:08:33,823 - INFO - 词频统计已导出: output/word_frequency.csv
+2025-06-18 22:08:33,823 - INFO - 统计信息已保存: output/word_statistics.txt
+2025-06-18 22:08:33,823 - INFO - 开始识别旅游相关公司...
+2025-06-18 22:08:34,460 - INFO - 识别完成 - 旅游相关公司记录: 7468
+2025-06-18 22:08:34,502 - INFO - 数据标注完成 - 旅游记录: 7914/47364 (16.7%)
+2025-06-18 22:08:34,503 - INFO - 标注数据已保存: output/data_with_tourism_flag.csv
+2025-06-18 22:08:34,505 - INFO - 分析报告已生成: output/analysis_report.md
+2025-06-18 22:08:40,509 - INFO - 可视化图表已保存: output/analysis_charts.png
+2025-06-18 22:08:40,509 - INFO - 完整分析流程执行完成
+2025-06-18 22:17:49,232 - INFO - 分析器初始化完成 - 停用词: 294, 旅游分类: 13
+2025-06-18 22:17:49,232 - INFO - 加载数据文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:17:49,250 - INFO - 数据加载完成 - 总记录: 47364, 有效业务描述: 47364
+2025-06-18 22:17:49,250 - INFO - 开始分词处理...
+2025-06-18 22:17:49,251 - DEBUG - Building prefix dict from the default dictionary ...
+2025-06-18 22:17:49,252 - DEBUG - Loading model from cache /var/folders/x4/4x3jbdmd10bcx3fgchc2r0h40000gn/T/jieba.cache
+2025-06-18 22:17:49,477 - DEBUG - Loading model cost 0.226 seconds.
+2025-06-18 22:17:49,477 - DEBUG - Prefix dict has been built successfully.
+2025-06-18 22:17:50,575 - INFO - 分词完成 - 总词数: 324726, 不重复词数: 6800
+2025-06-18 22:17:50,579 - INFO - 词频统计已导出: output/word_frequency.csv
+2025-06-18 22:17:50,579 - INFO - 统计信息已保存: output/word_statistics.txt
+2025-06-18 22:17:50,579 - INFO - 开始识别旅游相关公司...
+2025-06-18 22:17:51,213 - INFO - 识别完成 - 旅游相关公司记录: 7468
+2025-06-18 22:17:51,253 - INFO - 数据标注完成 - 旅游记录: 7914/47364 (16.7%)
+2025-06-18 22:17:51,253 - INFO - 标注数据已保存: output/data_with_tourism_flag.csv
+2025-06-18 22:17:51,256 - INFO - 分析报告已生成: output/analysis_report.md
+2025-06-18 22:17:54,588 - INFO - 可视化图表已保存: output/analysis_charts.png
+2025-06-18 22:17:54,588 - INFO - 完整分析流程执行完成
+2025-06-18 22:17:54,590 - WARNING - 未设置API密钥，请设置环境变量SILICONFLOW_API_KEY
+2025-06-18 22:17:54,590 - INFO - API分析器初始化完成 - 模型: deepseek-ai/DeepSeek-V3
+2025-06-18 22:17:54,590 - INFO - 开始分析CSV文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:17:54,609 - INFO - 随机采样 50 条记录
+2025-06-18 22:17:54,609 - ERROR - API密钥未设置，无法进行分析
+2025-06-18 22:19:33,769 - INFO - 分析器初始化完成 - 停用词: 294, 旅游分类: 13
+2025-06-18 22:19:33,769 - INFO - 加载数据文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:19:33,788 - INFO - 数据加载完成 - 总记录: 47364, 有效业务描述: 47364
+2025-06-18 22:19:33,788 - INFO - 开始分词处理...
+2025-06-18 22:19:33,789 - DEBUG - Building prefix dict from the default dictionary ...
+2025-06-18 22:19:33,789 - DEBUG - Loading model from cache /var/folders/x4/4x3jbdmd10bcx3fgchc2r0h40000gn/T/jieba.cache
+2025-06-18 22:19:34,015 - DEBUG - Loading model cost 0.226 seconds.
+2025-06-18 22:19:34,015 - DEBUG - Prefix dict has been built successfully.
+2025-06-18 22:19:35,101 - INFO - 分词完成 - 总词数: 324726, 不重复词数: 6800
+2025-06-18 22:19:35,106 - INFO - 词频统计已导出: output/word_frequency.csv
+2025-06-18 22:19:35,106 - INFO - 统计信息已保存: output/word_statistics.txt
+2025-06-18 22:19:35,106 - INFO - 开始识别旅游相关公司...
+2025-06-18 22:19:35,752 - INFO - 识别完成 - 旅游相关公司记录: 7468
+2025-06-18 22:19:35,793 - INFO - 数据标注完成 - 旅游记录: 7914/47364 (16.7%)
+2025-06-18 22:19:35,793 - INFO - 标注数据已保存: output/data_with_tourism_flag.csv
+2025-06-18 22:19:35,795 - INFO - 分析报告已生成: output/analysis_report.md
+2025-06-18 22:19:39,111 - INFO - 可视化图表已保存: output/analysis_charts.png
+2025-06-18 22:19:39,111 - INFO - 完整分析流程执行完成
+2025-06-18 22:19:39,112 - INFO - API分析器初始化完成 - 模型: Pro/deepseek-ai/DeepSeek-V3
+2025-06-18 22:19:39,112 - INFO - 开始分析CSV文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:19:39,130 - INFO - 随机采样 50 条记录
+2025-06-18 22:19:39,130 - INFO - 开始批量分析 50 条记录，批次大小: 8
+2025-06-18 22:19:39,130 - INFO - 处理批次 1/7
+2025-06-18 22:19:51,392 - INFO - 处理批次 2/7
+2025-06-18 22:20:03,048 - INFO - 处理批次 3/7
+2025-06-18 22:20:16,055 - INFO - 处理批次 4/7
+2025-06-18 22:20:32,747 - INFO - 处理批次 5/7
+2025-06-18 22:20:43,782 - INFO - 处理批次 6/7
+2025-06-18 22:20:55,710 - INFO - 处理批次 7/7
+2025-06-18 22:21:00,098 - INFO - 批量分析完成，共处理 50 条记录
+2025-06-18 22:21:00,100 - INFO - API分析报告已生成: output/api_analysis_report_20250618_222100.md
+2025-06-18 22:21:00,100 - INFO - API分析结果已保存: output/api_analysis_results_20250618_222100.csv
+2025-06-18 22:32:38,235 - INFO - 分析器初始化完成 - 停用词: 294, 旅游分类: 13
+2025-06-18 22:32:38,235 - INFO - 加载数据文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:32:38,254 - INFO - 数据加载完成 - 总记录: 47364, 有效业务描述: 47364
+2025-06-18 22:32:38,254 - INFO - 开始分词处理...
+2025-06-18 22:32:38,255 - DEBUG - Building prefix dict from the default dictionary ...
+2025-06-18 22:32:38,256 - DEBUG - Loading model from cache /var/folders/x4/4x3jbdmd10bcx3fgchc2r0h40000gn/T/jieba.cache
+2025-06-18 22:32:38,486 - DEBUG - Loading model cost 0.231 seconds.
+2025-06-18 22:32:38,486 - DEBUG - Prefix dict has been built successfully.
+2025-06-18 22:32:39,579 - INFO - 分词完成 - 总词数: 324726, 不重复词数: 6800
+2025-06-18 22:32:39,583 - INFO - 词频统计已导出: output/word_frequency.csv
+2025-06-18 22:32:39,583 - INFO - 统计信息已保存: output/word_statistics.txt
+2025-06-18 22:32:39,583 - INFO - 开始识别旅游相关公司...
+2025-06-18 22:32:40,218 - INFO - 识别完成 - 旅游相关公司记录: 7468
+2025-06-18 22:32:40,259 - INFO - 数据标注完成 - 旅游记录: 7914/47364 (16.7%)
+2025-06-18 22:32:40,259 - INFO - 标注数据已保存: output/data_with_tourism_flag.csv
+2025-06-18 22:32:40,261 - INFO - 分析报告已生成: output/analysis_report.md
+2025-06-18 22:32:42,889 - INFO - 可视化图表已保存: output/analysis_charts.png
+2025-06-18 22:32:42,889 - INFO - 完整分析流程执行完成
+2025-06-18 22:32:42,890 - INFO - API分析器初始化完成 - 模型: Pro/deepseek-ai/DeepSeek-V3
+2025-06-18 22:32:42,890 - INFO - 开始分析CSV文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 22:32:42,907 - INFO - 读取到 47364 条记录
+2025-06-18 22:32:42,907 - INFO - 将分析全部 47364 条记录
+2025-06-18 22:32:43,402 - INFO - 开始批量分析 47364 条记录，批次大小: 20
+2025-06-18 22:32:43,402 - INFO - 处理批次 1/2369
+2025-06-18 22:33:06,631 - INFO - 处理批次 2/2369
+2025-06-18 22:33:30,495 - INFO - 处理批次 3/2369

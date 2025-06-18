@@ -29,7 +29,7 @@ def run_basic_analysis(data_file, config_dir='config', output_dir='output'):
     print("   - analysis_report.md: 分析报告")
     print("   - analysis_charts.png: 可视化图表")
 
-def run_api_analysis(data_file, sample_size=50, config_dir='config', output_dir='output'):
+def run_api_analysis(data_file, sample_size=None, config_dir='config', output_dir='output'):
     """运行API智能分析"""
     print("🤖 开始API智能分析...")
     
@@ -45,8 +45,8 @@ def main():
     parser.add_argument('data_file', help='CSV数据文件路径')
     parser.add_argument('--mode', choices=['basic', 'api', 'both'], default='basic',
                        help='分析模式: basic(基础分析), api(API分析), both(两种都运行)')
-    parser.add_argument('--sample-size', type=int, default=50,
-                       help='API分析的样本大小 (默认: 50)')
+    parser.add_argument('--sample-size', type=int, default=None,
+                       help='API分析的样本大小 (默认: 全部数据)')
     parser.add_argument('--config-dir', default='config',
                        help='配置文件目录 (默认: config)')
     parser.add_argument('--output-dir', default='output',

@@ -51,7 +51,7 @@ class APIAnalyzer:
             "base_url": "https://api.siliconflow.cn/v1",
             "model": "deepseek-ai/DeepSeek-V3",
             "max_requests_per_minute": 20,
-            "batch_size": 8,
+            "batch_size": 20,
             "timeout": 60
         }
         
@@ -245,15 +245,18 @@ class APIAnalyzer:
     def analyze_csv_file(self, csv_file: str, sample_size: int = None) -> str:
         """分析CSV文件"""
         logging.info(f"开始分析CSV文件: {csv_file}")
-        
+
         # 读取数据
         df = pd.read_csv(csv_file, encoding='utf-8')
-        
-        # 采样
+        logging.info(f"读取到 {len(df)} 条记录")
+
+        # 采样（如果指定了sample_size且小于总数据量）
         if sample_size and sample_size < len(df):
             df = df.sample(n=sample_size, random_state=42)
-            logging.info(f"随机采样 {sample_size} 条记录")
-        
+            logging.info(f"随机采样 {sample_size} 条记录进行分析")
+        else:
+            logging.info(f"将分析全部 {len(df)} 条记录")
+
         # 准备分析数据
         business_data = []
         for _, row in df.iterrows():
@@ -263,21 +266,21 @@ class APIAnalyzer:
                 'symbol': str(row.get('Symbol', '')),
                 'end_date': str(row.get('EndDate', ''))
             })
-        
+
         # 执行批量分析
         results = self.analyze_batch(business_data)
-        
+
         # 保存结果
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
+
         # 保存为CSV
         results_df = pd.DataFrame(results)
         csv_file = self.output_dir / f"api_analysis_results_{timestamp}.csv"
         results_df.to_csv(csv_file, index=False, encoding='utf-8-sig')
-        
+
         # 生成统计报告
         self._generate_api_report(results, timestamp)
-        
+
         logging.info(f"API分析结果已保存: {csv_file}")
         return str(csv_file)
     
@@ -323,9 +326,9 @@ class APIAnalyzer:
 def main():
     """主函数"""
     analyzer = APIAnalyzer()
-    
-    # 分析前20条记录作为示例
-    result_file = analyzer.analyze_csv_file('data/STK_LISTEDCOINFOANL.csv', sample_size=20)
+
+    # 分析全部记录
+    result_file = analyzer.analyze_csv_file('data/STK_LISTEDCOINFOANL.csv')
     print(f"API分析完成，结果保存在: {result_file}")
 
 if __name__ == "__main__":
