@@ -29,13 +29,20 @@ def run_basic_analysis(data_file, config_dir='config', output_dir='output'):
     print("   - analysis_report.md: 分析报告")
     print("   - analysis_charts.png: 可视化图表")
 
-def run_api_analysis(data_file, sample_size=None, config_dir='config', output_dir='output'):
+def run_api_analysis(data_file, sample_size=None, config_dir='config', output_dir='output',
+                    enable_deduplication=True):
     """运行API智能分析"""
     print("🤖 开始API智能分析...")
-    
+
+    if enable_deduplication:
+        print("📊 启用去重优化，相同业务文本只分析一次")
+    else:
+        print("⚠️  已禁用去重优化，将分析所有重复文本")
+
     analyzer = APIAnalyzer(config_dir=config_dir, output_dir=output_dir)
-    result_file = analyzer.analyze_csv_file(data_file, sample_size=sample_size)
-    
+    result_file = analyzer.analyze_csv_file(data_file, sample_size=sample_size,
+                                          enable_deduplication=enable_deduplication)
+
     print("✅ API分析完成！")
     print(f"📁 结果文件: {result_file}")
 
@@ -51,6 +58,8 @@ def main():
                        help='配置文件目录 (默认: config)')
     parser.add_argument('--output-dir', default='output',
                        help='输出文件目录 (默认: output)')
+    parser.add_argument('--no-deduplication', action='store_true',
+                       help='禁用去重优化，处理所有重复文本')
     
     args = parser.parse_args()
     
@@ -73,7 +82,9 @@ def main():
             print()
         
         if args.mode in ['api', 'both']:
-            run_api_analysis(args.data_file, args.sample_size, args.config_dir, args.output_dir)
+            enable_dedup = not args.no_deduplication
+            run_api_analysis(args.data_file, args.sample_size, args.config_dir, args.output_dir,
+                           enable_deduplication=enable_dedup)
         
         print("🎉 所有分析任务完成！")
         
