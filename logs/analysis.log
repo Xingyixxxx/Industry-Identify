@@ -1,0 +1,39 @@
+2025-06-18 18:00:49,623 - INFO - 从 stopwords.txt 加载了 294 个停用词
+2025-06-18 18:00:49,624 - INFO - 从 tourism_keywords.txt 加载了 20 个分类
+2025-06-18 18:00:49,624 - INFO - 初始化分析器完成，停用词数量: 294
+2025-06-18 18:00:49,624 - INFO - 旅游关键词分类数量: 20
+2025-06-18 18:00:49,624 - INFO - 正在加载数据...
+2025-06-18 18:00:49,673 - INFO - 数据加载完成，共47364条记录
+2025-06-18 18:00:49,677 - INFO - 有效主营业务描述：47364条
+2025-06-18 18:00:49,677 - INFO - 正在进行分词...
+2025-06-18 18:00:49,679 - DEBUG - Building prefix dict from the default dictionary ...
+2025-06-18 18:00:49,680 - DEBUG - Loading model from cache /var/folders/07/3p41fxw138b_lz7hdy4spqjh0000gn/T/jieba.cache
+2025-06-18 18:00:50,739 - DEBUG - Loading model cost 1.060 seconds.
+2025-06-18 18:00:50,739 - DEBUG - Prefix dict has been built successfully.
+2025-06-18 18:00:53,746 - INFO - 分词完成，共提取324726个词，去重后6800个
+2025-06-18 18:00:53,752 - INFO - 词频统计结果已保存到 word_frequency_output.txt
+2025-06-18 18:00:53,756 - INFO - 词频统计 (Top 50):
+2025-06-18 18:00:53,758 - INFO - 正在分析旅游相关行业...
+2025-06-18 18:00:55,875 - INFO - 发现29499家旅游相关公司
+2025-06-18 18:00:55,968 - INFO - 旅游相关公司信息已保存到 tourism_companies_enhanced.csv
+2025-06-18 18:00:55,969 - INFO - 正在生成可视化图表...
+2025-06-18 18:01:08,667 - INFO - 图表已保存为 enhanced_business_analysis.png
+2025-06-18 18:01:08,667 - INFO - 分析完成，发现 29499 家旅游相关公司
+2025-06-18 18:21:08,573 - INFO - 分析器初始化完成 - 停用词: 294, 旅游分类: 13
+2025-06-18 18:21:08,573 - INFO - 加载数据文件: data/STK_LISTEDCOINFOANL.csv
+2025-06-18 18:21:08,631 - INFO - 数据加载完成 - 总记录: 47364, 有效业务描述: 47364
+2025-06-18 18:21:08,631 - INFO - 开始分词处理...
+2025-06-18 18:21:08,633 - DEBUG - Building prefix dict from the default dictionary ...
+2025-06-18 18:21:08,633 - DEBUG - Loading model from cache /var/folders/07/3p41fxw138b_lz7hdy4spqjh0000gn/T/jieba.cache
+2025-06-18 18:21:09,649 - DEBUG - Loading model cost 1.016 seconds.
+2025-06-18 18:21:09,649 - DEBUG - Prefix dict has been built successfully.
+2025-06-18 18:21:12,704 - INFO - 分词完成 - 总词数: 324726, 不重复词数: 6800
+2025-06-18 18:21:12,721 - INFO - 词频统计已导出: output/word_frequency.csv
+2025-06-18 18:21:12,721 - INFO - 统计信息已保存: output/word_statistics.txt
+2025-06-18 18:21:12,721 - INFO - 开始识别旅游相关公司...
+2025-06-18 18:21:14,442 - INFO - 识别完成 - 旅游相关公司记录: 7468
+2025-06-18 18:21:14,544 - INFO - 数据标注完成 - 旅游记录: 7914/47364 (16.7%)
+2025-06-18 18:21:14,544 - INFO - 标注数据已保存: output/data_with_tourism_flag.csv
+2025-06-18 18:21:14,552 - INFO - 分析报告已生成: output/analysis_report.md
+2025-06-18 18:21:18,473 - INFO - 可视化图表已保存: output/analysis_charts.png
+2025-06-18 18:21:18,475 - INFO - 完整分析流程执行完成

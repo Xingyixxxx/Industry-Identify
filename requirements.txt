@@ -1,0 +1,63 @@
+# 主营业务分词与旅游行业分析项目依赖包
+# Tourism Business Analysis Project Dependencies
+# 兼容Python 3.13版本
+
+# 数据处理和分析 (Data Processing and Analysis)
+pandas>=2.1.0                    # 数据处理和分析的核心库
+numpy>=1.25.0                    # 数值计算基础库
+
+# 中文分词 (Chinese Text Segmentation)
+jieba>=0.42.1                    # 中文分词库，用于主营业务文本分词
+
+# 数据可视化 (Data Visualization)
+matplotlib>=3.8.0                # 基础绘图库
+seaborn>=0.13.0                  # 统计数据可视化库
+wordcloud>=1.9.2                 # 词云生成库
+
+# 图像处理 (Image Processing)
+Pillow>=10.0.0                   # 图像处理库，wordcloud依赖
+
+# HTTP请求 (HTTP Requests)
+requests>=2.31.0                 # HTTP库，用于API调用
+urllib3>=2.0.0                   # HTTP客户端库
+
+# 异步处理 (Asynchronous Processing)
+aiohttp>=3.9.0                   # 异步HTTP客户端，用于并发API调用
+
+# 进度条显示 (Progress Bar)
+tqdm>=4.66.0                     # 进度条显示库
+
+# 配置文件处理 (Configuration File Handling)
+python-dotenv>=1.0.0             # 环境变量管理
+
+# 重试机制 (Retry Mechanism)
+backoff>=2.2.0                   # 指数退避重试库
+
+# 时间处理 (Time Handling)
+python-dateutil>=2.8.0           # 日期时间处理扩展
+
+# 文本处理 (Text Processing)
+chardet>=5.0.0                   # 字符编码检测
+
+# 科学计算 (Scientific Computing)
+scipy>=1.11.0                    # 科学计算库
+
+# 中文字体支持 (Chinese Font Support)
+# 注意：可能需要手动安装中文字体文件
+# Note: Chinese fonts may need to be installed manually
+
+# Python 3.13 安装说明 (Installation Instructions for Python 3.13):
+#
+# 1. 首先升级pip和setuptools:
+#    pip install --upgrade pip setuptools wheel
+#
+# 2. 安装依赖包:
+#    pip install -r requirements.txt
+#
+# 3. 如果遇到安装问题，可以尝试：
+#    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+#
+# 4. 或者逐个安装核心依赖：
+#    pip install pandas jieba matplotlib seaborn wordcloud numpy requests tqdm backoff
+#
+# 5. 对于Python 3.13，某些包可能需要从源码编译，请确保安装了编译工具

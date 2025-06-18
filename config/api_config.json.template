@@ -1,0 +1,9 @@
+{
+  "api_key": "sk-oawsnjxzbhhwcumltqxeczokbzbtcbrhtbwsyzdxtfhgxnbf",
+  "base_url": "https://api.siliconflow.cn/v1",
+  "model": "Pro/deepseek-ai/DeepSeek-V3",
+  "max_requests_per_second": 5,
+  "timeout": 30,
+  "max_retries": 3,
+  "retry_delay": 1.0
+}
