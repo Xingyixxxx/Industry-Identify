@@ -625,6 +625,9 @@ class APIAnalyzer:
         # 生成统计报告
         self._generate_api_report(all_results, timestamp)
 
+        # 自动检测并合并基础分析结果
+        self._auto_merge_with_basic_analysis(str(final_result_file))
+
         logging.info(f"增量分析完成！")
         logging.info(f"进度文件: {final_progress_file}")
         logging.info(f"最终结果: {final_result_file}")
@@ -736,6 +739,9 @@ class APIAnalyzer:
             # 生成统计报告
             self._generate_api_report(results, timestamp)
 
+            # 自动检测并合并基础分析结果
+            self._auto_merge_with_basic_analysis(str(csv_file_path))
+
             logging.info(f"API分析结果已保存: {csv_file_path}")
             return str(csv_file_path)
     
@@ -777,6 +783,36 @@ class APIAnalyzer:
                     f.write(f"  - 理由: {company.get('analysis_reason', 'N/A')}\n\n")
         
         logging.info(f"API分析报告已生成: {report_file}")
+
+    def _auto_merge_with_basic_analysis(self, api_results_file: str):
+        """自动检测并合并基础分析结果"""
+        try:
+            # 检查是否存在基础分析结果文件
+            base_file = self.output_dir / 'data_with_tourism_flag.csv'
+
+            if not base_file.exists():
+                logging.info("未找到基础分析结果文件，跳过自动合并")
+                return
+
+            logging.info("检测到基础分析结果，开始自动合并...")
+
+            # 导入BusinessAnalyzer类
+            from .business_analyzer import BusinessAnalyzer
+
+            # 创建BusinessAnalyzer实例并执行合并
+            business_analyzer = BusinessAnalyzer(output_dir=str(self.output_dir))
+            merged_file = business_analyzer.merge_api_results(
+                base_file=str(base_file),
+                api_results_file=api_results_file
+            )
+
+            logging.info(f"自动合并完成，合并文件: {merged_file}")
+            print(f"🔗 自动合并完成！合并文件: {merged_file}")
+
+        except Exception as e:
+            logging.warning(f"自动合并失败: {e}")
+            print(f"⚠️  自动合并失败: {e}")
+            print("💡 您可以稍后手动运行合并功能")
 
     def print_processing_status(self, csv_file: str, sample_size: int = None):
         """打印处理状态信息"""
